@@ -8,13 +8,38 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UAnimMontage;
 #ifdef ARENABATTLE_ABCharacter_generated_h
 #error "ABCharacter.generated.h already included, missing '#pragma once' in ABCharacter.h"
 #endif
 #define ARENABATTLE_ABCharacter_generated_h
 
-#define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_RPC_WRAPPERS
-#define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded) \
+	{ \
+		P_GET_OBJECT(UAnimMontage,Z_Param_Montage); \
+		P_GET_UBOOL(Z_Param_bInterupted); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnAttackMontageEnded(Z_Param_Montage,Z_Param_bInterupted); \
+		P_NATIVE_END; \
+	}
+
+
+#define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded) \
+	{ \
+		P_GET_OBJECT(UAnimMontage,Z_Param_Montage); \
+		P_GET_UBOOL(Z_Param_bInterupted); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnAttackMontageEnded(Z_Param_Montage,Z_Param_bInterupted); \
+		P_NATIVE_END; \
+	}
+
+
 #define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAABCharacter(); \
@@ -59,7 +84,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AABCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AABCharacter)
 
 
-#define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_PRIVATE_PROPERTY_OFFSET
+#define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__IsAttacking() { return STRUCT_OFFSET(AABCharacter, IsAttacking); }
+
+
 #define ArenaBattle_Source_ArenaBattle_ABCharacter_h_9_PROLOG
 #define ArenaBattle_Source_ArenaBattle_ABCharacter_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

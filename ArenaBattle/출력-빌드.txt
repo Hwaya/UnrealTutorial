@@ -1,0 +1,29 @@
+﻿1>------ 빌드 시작: 프로젝트: ArenaBattle, 구성: Development_Editor x64 ------
+1>Using 'git status' to determine working set for adaptive non-unity build.
+1>Creating makefile for hot reloading ArenaBattleEditor (modules to compile have changed)
+1>Compiling game modules for hot reload
+1>Parsing headers for ArenaBattleEditor
+1>  Running UnrealHeaderTool "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\ArenaBattle.uproject" "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\ArenaBattleEditor\Development\ArenaBattleEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+1>Reflection code generated for ArenaBattleEditor in 11.0333267 seconds
+1>Performing 16 actions (4 in parallel)
+1>ABAnimInstance.cpp
+1>ABCharacter.cpp
+1>ABGameMode.cpp
+1>ABAnimInstance.gen.cpp
+1>ABPawn.cpp
+1>ABPlayerController.cpp
+1>ArenaBattle.cpp
+1>ArenaBattleGameModeBase.cpp
+1>ABCharacter.gen.cpp
+1>ABGameMode.gen.cpp
+1>ABPawn.gen.cpp
+1>ABPlayerController.gen.cpp
+1>ArenaBattle.init.gen.cpp
+1>ArenaBattleGameModeBase.gen.cpp
+1>[15/16] Link UE4Editor-ArenaBattle-3399.dll
+1>[16/16] Link UE4Editor-ArenaBattle-3399.lib
+1>   C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3399.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3399.exp 개체를 생성하고 있습니다.
+1>   C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3399.suppressed.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3399.suppressed.exp 개체를 생성하고 있습니다.
+1>Deploying ArenaBattleEditor Win64 Development...
+1>Total build time: 54.95 seconds (Local executor: 30.42 seconds)
+========== 빌드: 성공 1, 실패 0, 최신 0, 생략 0 ==========
