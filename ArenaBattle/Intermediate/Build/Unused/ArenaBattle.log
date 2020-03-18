@@ -1,0 +1,15 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build.
+  Compiling game modules for hot reload
+  Parsing headers for ArenaBattleEditor
+    Running UnrealHeaderTool "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\ArenaBattle.uproject" "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\ArenaBattleEditor\Development\ArenaBattleEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for ArenaBattleEditor in 10.2793246 seconds
+  Performing 5 actions (4 in parallel)
+  ABAnimInstance.cpp
+  ABAnimInstance.gen.cpp
+  ArenaBattle.init.gen.cpp
+  [4/5] Link UE4Editor-ArenaBattle-1222.dll
+  [5/5] Link UE4Editor-ArenaBattle-1222.lib
+     C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-1222.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-1222.exp 개체를 생성하고 있습니다.
+     C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-1222.suppressed.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-1222.suppressed.exp 개체를 생성하고 있습니다.
+  Deploying ArenaBattleEditor Win64 Development...
+  Total build time: 19.35 seconds (Local executor: 6.87 seconds)
