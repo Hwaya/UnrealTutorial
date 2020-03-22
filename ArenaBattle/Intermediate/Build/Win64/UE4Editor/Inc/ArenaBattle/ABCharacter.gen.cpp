@@ -19,8 +19,10 @@ void EmptyLinkFunctionForGeneratedCodeABCharacter() {}
 	UPackage* Z_Construct_UPackage__Script_ArenaBattle();
 	ARENABATTLE_API UFunction* Z_Construct_UFunction_AABCharacter_OnAttackMontageEnded();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+	ARENABATTLE_API UClass* Z_Construct_UClass_UABAnimInstance_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 // End Cross Module References
 	void AABCharacter::StaticRegisterNativesAABCharacter()
 	{
@@ -81,6 +83,62 @@ void EmptyLinkFunctionForGeneratedCodeABCharacter() {}
 			};
 #endif
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackRadius_MetaData[] = {
+				{ "AllowPrivateAccess", "TRUE" },
+				{ "Category", "Attack" },
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackRadius = { UE4CodeGen_Private::EPropertyClass::Float, "AttackRadius", RF_Public|RF_Transient|RF_MarkAsNative, 0x0040000000020815, 1, nullptr, STRUCT_OFFSET(AABCharacter, AttackRadius), METADATA_PARAMS(NewProp_AttackRadius_MetaData, ARRAY_COUNT(NewProp_AttackRadius_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackRange_MetaData[] = {
+				{ "AllowPrivateAccess", "TRUE" },
+				{ "Category", "Attack" },
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackRange = { UE4CodeGen_Private::EPropertyClass::Float, "AttackRange", RF_Public|RF_Transient|RF_MarkAsNative, 0x0040000000020815, 1, nullptr, STRUCT_OFFSET(AABCharacter, AttackRange), METADATA_PARAMS(NewProp_AttackRange_MetaData, ARRAY_COUNT(NewProp_AttackRange_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ABAnim_MetaData[] = {
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ABAnim = { UE4CodeGen_Private::EPropertyClass::Object, "ABAnim", RF_Public|RF_Transient|RF_MarkAsNative, 0x0040000000000000, 1, nullptr, STRUCT_OFFSET(AABCharacter, ABAnim), Z_Construct_UClass_UABAnimInstance_NoRegister, METADATA_PARAMS(NewProp_ABAnim_MetaData, ARRAY_COUNT(NewProp_ABAnim_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxCombo_MetaData[] = {
+				{ "AllowPrivateAccess", "TRUE" },
+				{ "Category", "Attack" },
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FIntPropertyParams NewProp_MaxCombo = { UE4CodeGen_Private::EPropertyClass::Int, "MaxCombo", RF_Public|RF_Transient|RF_MarkAsNative, 0x0040000000020815, 1, nullptr, STRUCT_OFFSET(AABCharacter, MaxCombo), METADATA_PARAMS(NewProp_MaxCombo_MetaData, ARRAY_COUNT(NewProp_MaxCombo_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentCombo_MetaData[] = {
+				{ "AllowPrivateAccess", "TRUE" },
+				{ "Category", "Attack" },
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FIntPropertyParams NewProp_CurrentCombo = { UE4CodeGen_Private::EPropertyClass::Int, "CurrentCombo", RF_Public|RF_Transient|RF_MarkAsNative, 0x0040000000020815, 1, nullptr, STRUCT_OFFSET(AABCharacter, CurrentCombo), METADATA_PARAMS(NewProp_CurrentCombo_MetaData, ARRAY_COUNT(NewProp_CurrentCombo_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsComboInputOn_MetaData[] = {
+				{ "AllowPrivateAccess", "TRUE" },
+				{ "Category", "Attack" },
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			auto NewProp_IsComboInputOn_SetBit = [](void* Obj){ ((AABCharacter*)Obj)->IsComboInputOn = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsComboInputOn = { UE4CodeGen_Private::EPropertyClass::Bool, "IsComboInputOn", RF_Public|RF_Transient|RF_MarkAsNative, 0x0040000000020815, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AABCharacter), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_IsComboInputOn_SetBit)>::SetBit, METADATA_PARAMS(NewProp_IsComboInputOn_MetaData, ARRAY_COUNT(NewProp_IsComboInputOn_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CanNextCombo_MetaData[] = {
+				{ "AllowPrivateAccess", "TRUE" },
+				{ "Category", "Attack" },
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			auto NewProp_CanNextCombo_SetBit = [](void* Obj){ ((AABCharacter*)Obj)->CanNextCombo = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_CanNextCombo = { UE4CodeGen_Private::EPropertyClass::Bool, "CanNextCombo", RF_Public|RF_Transient|RF_MarkAsNative, 0x0040000000020815, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AABCharacter), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_CanNextCombo_SetBit)>::SetBit, METADATA_PARAMS(NewProp_CanNextCombo_MetaData, ARRAY_COUNT(NewProp_CanNextCombo_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsAttacking_MetaData[] = {
 				{ "AllowPrivateAccess", "TRUE" },
 				{ "Category", "Attack" },
@@ -105,10 +163,26 @@ void EmptyLinkFunctionForGeneratedCodeABCharacter() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SpringArm = { UE4CodeGen_Private::EPropertyClass::Object, "SpringArm", RF_Public|RF_Transient|RF_MarkAsNative, 0x00100000000a0009, 1, nullptr, STRUCT_OFFSET(AABCharacter, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(NewProp_SpringArm_MetaData, ARRAY_COUNT(NewProp_SpringArm_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Weapon_MetaData[] = {
+				{ "Category", "Weapon" },
+				{ "EditInline", "true" },
+				{ "ModuleRelativePath", "ABCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon = { UE4CodeGen_Private::EPropertyClass::Object, "Weapon", RF_Public|RF_Transient|RF_MarkAsNative, 0x00100000000a0009, 1, nullptr, STRUCT_OFFSET(AABCharacter, Weapon), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Weapon_MetaData, ARRAY_COUNT(NewProp_Weapon_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_AttackRadius,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_AttackRange,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ABAnim,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MaxCombo,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CurrentCombo,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_IsComboInputOn,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_CanNextCombo,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_IsAttacking,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Camera,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SpringArm,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_Weapon,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<AABCharacter>::IsAbstract,
@@ -128,7 +202,7 @@ void EmptyLinkFunctionForGeneratedCodeABCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AABCharacter, 3332149163);
+	IMPLEMENT_CLASS(AABCharacter, 1782151477);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AABCharacter(Z_Construct_UClass_AABCharacter, &AABCharacter::StaticClass, TEXT("/Script/ArenaBattle"), TEXT("AABCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AABCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

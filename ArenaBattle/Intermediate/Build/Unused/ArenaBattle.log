@@ -1,89 +1,10 @@
-﻿  Performing full C++ include scan (building a new target)
-  Using 'git status' to determine working set for adaptive non-unity build.
-  Creating makefile for ArenaBattleEditor (no existing makefile)
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1040.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1040.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1222.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1222.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1375.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1375.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1643.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-1643.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-20.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-20.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-2305.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-2305.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-2332.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-2332.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-261.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-261.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3017.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3017.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3234.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3234.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3399.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3399.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3573.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3573.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3596.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3596.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3772.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-3772.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4020.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4020.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4590.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4590.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4624.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4624.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4727.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4727.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4770.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-4770.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5052.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5052.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5072.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5072.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5288.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5288.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5733.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5733.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5803.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-5803.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-6013.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-6013.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-6041.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-6041.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-6900.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-6900.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-7006.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-7006.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-7403.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-7403.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-7496.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-7496.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-8384.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-8384.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-9088.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-9088.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-9390.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-9390.pdb".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-9469.dll".
-  Deleting old hot reload file: "C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Binaries\Win64\UE4Editor-ArenaBattle-9469.pdb".
-  Performing 13 actions (4 in parallel)
-  ABAnimInstance.gen.cpp
-  ABGameMode.cpp
-  ABAnimInstance.cpp
+﻿  Using 'git status' to determine working set for adaptive non-unity build.
+  Compiling game modules for hot reload
+  Performing 3 actions (4 in parallel)
   ABCharacter.cpp
-  ABPawn.cpp
-  ABPlayerController.cpp
-  ArenaBattle.cpp
-  ABCharacter.gen.cpp
-  ABGameMode.gen.cpp
-  ABPawn.gen.cpp
-  ABPlayerController.gen.cpp
-  [12/13] Link UE4Editor-ArenaBattle.dll
-  [13/13] Link UE4Editor-ArenaBattle.lib
-     C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle.exp 개체를 생성하고 있습니다.
-     C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle.suppressed.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle.suppressed.exp 개체를 생성하고 있습니다.
+  [2/3] Link UE4Editor-ArenaBattle-3308.dll
+  [3/3] Link UE4Editor-ArenaBattle-3308.lib
+     C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3308.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3308.exp 개체를 생성하고 있습니다.
+     C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3308.suppressed.lib 라이브러리 및 C:\Users\HY_Raptop\OneDrive\Desktop\GitHub\UnrealTutorial\ArenaBattle\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ArenaBattle-3308.suppressed.exp 개체를 생성하고 있습니다.
   Deploying ArenaBattleEditor Win64 Development...
-  Total build time: 42.13 seconds (Local executor: 27.92 seconds)
+  Total build time: 10.48 seconds (Local executor: 8.60 seconds)

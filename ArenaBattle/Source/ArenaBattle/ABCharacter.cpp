@@ -2,6 +2,7 @@
 
 #include "ABCharacter.h"
 #include "ABAnimInstance.h"
+#include "DrawDebugHelpers.h"
 
 
 // Sets default values
@@ -51,6 +52,37 @@ AABCharacter::AABCharacter()
 	ArmLengthSpeed = 3.f;
 	ArmRotationSpeed = 10.f;
 	GetCharacterMovement()->JumpZVelocity = 800.f;
+
+	IsAttacking = false;
+
+	MaxCombo = 4;
+	AttackEndComboState();
+
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("ABCharacter"));
+
+	AttackRange = 200.f;
+	AttackRadius = 50.f;
+
+	FName WeaponSocket(TEXT("hand_rSocket"));
+
+
+	ABLOG(Warning, TEXT("aaaaaaaaaaaaaaaaaaaaaaa"));
+
+	if (GetMesh()->DoesSocketExist(WeaponSocket))
+	{
+		ABLOG(Warning, TEXT("bbbbbbbbbbbbbbbbbbbbb"));
+
+		Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WEAPON"));
+		//StaticMesh'/Game/InfinityBladeWeapons/Weapons/Blunt/Blunt_BoneShard/StaticMesh/SM_Blunt_BoneShardMace.SM_Blunt_BoneShardMace'
+		static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_WEAPON(TEXT("Game/InfinityBladeWeapons/Weapons/Blunt/Blunt_BoneShard/StaticMesh/SM_Blunt_BoneShardMace.SM_Blunt_BoneShardMace"));
+		ABLOG(Warning, TEXT("ccccccccccccccccccccc"));
+		if (SK_WEAPON.Succeeded())
+		{
+			ABLOG(Warning, TEXT("ddddddddddddddddddddd"));
+			Weapon->SetSkeletalMesh(SK_WEAPON.Object);
+		}
+		Weapon->SetupAttachment(GetMesh(), WeaponSocket);
+	}
 }
 
 // Called when the game starts or when spawned
@@ -127,7 +159,40 @@ void AABCharacter::Tick(float DeltaTime)
 
 void AABCharacter::PostInitializeComponents()
 {
+	//PostInitializeComponents()를 오버라이드 할 경우 Super를 꼭 해줘야 크래시가 안 난다.
+	Super::PostInitializeComponents();
 
+	ABAnim = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
+	ABCHECK(nullptr != ABAnim);
+
+	//애님 인스턴스의 애님몽타주가 끝날때 AddDynamic을 통해 델리게이트 선언된 함수를 발생시킴
+	ABAnim->OnMontageEnded.AddDynamic(this, &AABCharacter::OnAttackMontageEnded);
+
+	ABAnim->OnNextAttackCheck.AddLambda([this]()->void {
+		ABLOG(Warning, TEXT("OnNextAttackCheck"));
+		CanNextCombo = false;
+		if (IsComboInputOn)
+		{
+			AttackStartComboState();
+			ABAnim->JumpToAttackMontageSection(CurrentCombo);
+		}
+	});
+
+	ABAnim->OnAttackHitCheck.AddUObject(this, &AABCharacter::AttackCheck);
+}
+
+float AABCharacter::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
+{
+	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	ABLOG(Warning, TEXT("Actor : %s Took Damage : %f"), *GetName(), FinalDamage);
+
+	if (FinalDamage > 0.f)
+	{
+		ABAnim->SetDeadAnim();
+		SetActorEnableCollision(false);
+	}
+
+	return FinalDamage;
 }
 
 // Called to bind functionality to input
@@ -212,14 +277,102 @@ void AABCharacter::ViewChange()
 
 void AABCharacter::Attack()
 {
-	ABLOG_S(Warning);
+	//ABLOG_S(Warning);
 
-	auto AnimInstance = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
-	if (nullptr == AnimInstance) return;
-	AnimInstance->PlayAttackMontage();
+	//if (IsAttacking) return;
+
+	////auto AnimInstance = Cast<UABAnimInstance>(GetMesh()->GetAnimInstance());
+	////if (nullptr == AnimInstance) return;
+
+
+	//ABAnim->PlayAttackMontage();
+
+	//IsAttacking = true;
+
+	if (IsAttacking)
+	{
+		ABCHECK(FMath::IsWithinInclusive<int32>(CurrentCombo, 1, MaxCombo));
+		if (CanNextCombo)
+		{
+			IsComboInputOn = true;
+		}
+	}
+	else
+	{
+		ABCHECK(CurrentCombo == 0);
+		AttackStartComboState();
+		ABAnim->PlayAttackMontage();
+		ABAnim->JumpToAttackMontageSection(CurrentCombo);
+		IsAttacking = true;
+	}
 }
 
 void AABCharacter::OnAttackMontageEnded(UAnimMontage * Montage, bool bInterupted)
 {
+	ABCHECK(IsAttacking);
+	ABCHECK(CurrentCombo > 0);
+	IsAttacking = false;
+	AttackEndComboState();
+}
+
+void AABCharacter::AttackStartComboState()
+{
+	CanNextCombo = true;
+	IsComboInputOn = false;
+	//FMath::IsWithinInclusive<Type>(확인할 변수, 최소값, 최대값) 확인할 변수가 최소값~최대값 범위 안인지 판별하는 함수
+	ABCHECK(FMath::IsWithinInclusive<int32>(CurrentCombo, 0, MaxCombo - 1));
+	CurrentCombo = FMath::Clamp<int32>(CurrentCombo + 1, 1, MaxCombo);
+}
+
+void AABCharacter::AttackEndComboState()
+{
+	IsComboInputOn = false;
+	CanNextCombo = false;
+	CurrentCombo = 0;
+}
+
+void AABCharacter::AttackCheck()
+{
+	FHitResult HitResult;
+	FCollisionQueryParams Params(NAME_None, false, this);
+	bool bResult = GetWorld()->SweepSingleByChannel(
+		HitResult,												//HitResult (충돌 결과 구조체)
+		GetActorLocation(),										//Start (탐색 시작 위치)
+		GetActorLocation() + GetActorForwardVector() * 200.f,	//End (탐색 종료 위치)
+		FQuat::Identity,										//Rot (탐색용 도형 회전)
+		ECollisionChannel::ECC_GameTraceChannel12,				//충돌 감지 트레이스 채널
+		FCollisionShape::MakeSphere(50.f),						//탐색 방법 설정 값 구조체
+		Params);												//탐색 반응 설정 구조체
+	
+#if ENABLE_DRAW_DEBUG
+
+	FVector TraceVec = GetActorForwardVector() * AttackRange;
+	FVector Center = GetActorLocation() + TraceVec * 0.5f;
+	float HalfHeight = AttackRange * 0.5f + AttackRadius;
+	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
+	FColor DrawColor = bResult ? FColor::Green : FColor::Red;
+	float DebugLifeTime = 5.f;
+
+	DrawDebugCapsule(GetWorld(),	// 월드			
+		Center,						// 그릴 지점 중심점
+		HalfHeight,					// 높이
+		AttackRadius,				// 반경
+		CapsuleRot,					// 회전값
+		DrawColor,					// 색
+		false,						// 퍼시스턴스 여부
+		DebugLifeTime);				// 그리는 시간
+#endif
+
+	if (bResult)
+	{
+		if (HitResult.Actor.IsValid())
+		{
+			ABLOG(Warning, TEXT("Hit Actor Name : %s"), *HitResult.Actor->GetName());
+
+			FDamageEvent DamageEvent;
+			//TakeDamage(데미지수치, 데미지 종류(이벤트), 가해자(컨트롤러), 가해자도구(폰 또는 액터))
+			HitResult.Actor->TakeDamage(50.f, DamageEvent, GetController(), this);
+		}
+	}
 }
 
