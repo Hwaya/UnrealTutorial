@@ -73,8 +73,8 @@ AABCharacter::AABCharacter()
 		ABLOG(Warning, TEXT("bbbbbbbbbbbbbbbbbbbbb"));
 
 		Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("WEAPON"));
-		//StaticMesh'/Game/InfinityBladeWeapons/Weapons/Blunt/Blunt_BoneShard/StaticMesh/SM_Blunt_BoneShardMace.SM_Blunt_BoneShardMace'
-		static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_WEAPON(TEXT("Game/InfinityBladeWeapons/Weapons/Blunt/Blunt_BoneShard/StaticMesh/SM_Blunt_BoneShardMace.SM_Blunt_BoneShardMace"));
+		//SkeletalMesh'/Game/InfinityBladeWeapons/Weapons/Weapon_ForgingHammers/SK_Forging_Mallet_02.SK_Forging_Mallet_02'
+		static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_WEAPON(TEXT("/Game/InfinityBladeWeapons/Weapons/Weapon_ForgingHammers/SK_Forging_Mallet_02.SK_Forging_Mallet_02"));
 		ABLOG(Warning, TEXT("ccccccccccccccccccccc"));
 		if (SK_WEAPON.Succeeded())
 		{
